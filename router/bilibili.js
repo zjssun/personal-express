@@ -22,13 +22,8 @@ const getData = (data) => {
      return {
        id: v.bvid,
        title: v.title,
-       desc: v.desc,
-       pic: v.pic.replace(/http:/, "https:"),
-       owner: v.owner,
-       data: v.stat,
        hot: v.stat.view,
-       url: v.short_link_v2 || `https://b23.tv/${v.bvid}`,
-       mobileUrl: `https://m.bilibili.com/video/${v.bvid}`,
+       url: `https://www.bilibili.com/video/${v.bvid}`
      };
    });
  };
@@ -44,6 +39,7 @@ router.get("/",async (req,res)=>{
          // 从服务器拉取数据
          const response = await axios.get(url);
          data = getData(response.data.data.list);
+         // 时间
          let date = new Date()
          let year = date.getFullYear();
          let month = date.getMonth() + 1;
