@@ -29,8 +29,8 @@ const getData = (data) => {
  };
 
 router.get("/",async (req,res)=>{
-   console.log("获取哔哩哔哩热门榜");
    try{
+      console.log("获取哔哩哔哩热门榜");
       // 从缓存中获取数据
       let data = await get(cacheKey);
       // 如果缓存中不存在数据
