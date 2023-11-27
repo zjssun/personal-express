@@ -53,7 +53,7 @@ router.get("/",async (req,res)=>{
        res.send({...routerInfo,
                   data:data,
                   length:data.length,
-                  updateTime:updateTime
+                  updateTime
                })
    }catch(err){
       console.log(err);

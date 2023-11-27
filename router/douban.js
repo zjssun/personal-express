@@ -73,7 +73,7 @@ router.get("/",async (req,res)=>{
          ...routerInfo,
          data,
          length:data.length,
-         updateTime:updateTime
+         updateTime
       });
    }catch(err){
       res.send({
