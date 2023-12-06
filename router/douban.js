@@ -39,8 +39,6 @@ const getData = (data)=>{
             title:replaceTitle($(item).find('a').text(),score),
             desc:$(item).find("p").text(),
             score,
-            comments: $(item).find("span.pl").text().match(/\d+/)[0] ?? "",
-            url:$(item).find("a").attr("href") ?? "",
          });
       });
       return dataList;
@@ -61,7 +59,7 @@ router.get("/",async (req,res)=>{
          let date = new Date()
          let year = date.getFullYear();
          let month = date.getMonth() + 1;
-         let day = date.getDate()+1;
+         let day = date.getDate();
          let hour = date.getHours();
          let min = date.getMinutes();
          updateTime = `${year}-${month}-${day}-${hour}:${min}`
