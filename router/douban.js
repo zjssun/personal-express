@@ -39,6 +39,7 @@ const getData = (data)=>{
             title:replaceTitle($(item).find('a').text(),score),
             desc:$(item).find("p").text(),
             score,
+            url:$(item).find("a").attr("href") ?? "",
          });
       });
       return dataList;
