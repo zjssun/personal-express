@@ -11,7 +11,7 @@ enter(app);
 
 
 app.listen(port, () => {
-    console.log(`Server is running http://localhost:${port}_che`);
+    console.log(`Server is running http://localhost:${port}`);
 })
 
 app.get("/", (req, res) => {
